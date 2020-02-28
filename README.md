@@ -14,7 +14,7 @@ Think about the mechanics of that game. By _tilting_ or _pressing_ it responded 
 your whims. It pulled you
 into its story by giving you a window into its world and a way of interacting
 with — shaping, even — that world. When you performed an ***event***, the
-computer made the world respond: the little plumber from 
+computer made the world respond: the little plumber from
 Brooklyn jumped (_Super Mario Franchise_), the undead warrior slashed at an evil foe (_Dark Souls_), or the banana-yellow
 guy ate the power pellet (_Pac-Man_).
 
@@ -29,6 +29,7 @@ learn how to move things on a page in response to an _event_.
 
 Open up `index.html` in your favorite browser (we'll be using Chrome). Open the
 console, and let's get a hold of what we're calling the "dodger":
+
 
 ```javascript
 let dodger = document.getElementById("dodger");
@@ -102,6 +103,10 @@ programmers — let's explore!
 ```javascript
 document.addEventListener("keydown", function(e) {
   console.log(e.key);
+  // document = page aka DOM
+  // addEventListener is a function which listens to anything happening on the page
+   //  events in the DOM are any features on the page
+
 });
 ```
 
@@ -118,7 +123,7 @@ document.addEventListener("keydown", function(e) {
     let leftNumbers = dodger.style.left.replace("px", "");
     let left = parseInt(leftNumbers, 10);
 
-    dodger.style.left = `${left - 1}px`;
+    dodger.style.left = `${left - 3}px`;
   }
 });
 ```
@@ -179,10 +184,10 @@ We have not yet implemented moving the dodger to the right. Can you do it? With
 the code implemented from the code along, think about what needs to change to
 make a `moveDodgerRight()` function. We'll need another `e.key` in the event
 listener, and instead of moving the dodger `${left - 1}px`, we'll be moving it
-`${left + 1}px`. 
+`${left + 1}px`.
 
-Challenge: How can you prevent the dodger from escaping off the right-hand side? 
-Perhaps there are certain restrictions you'd want to put in place. 
+Challenge: How can you prevent the dodger from escaping off the right-hand side?
+Perhaps there are certain restrictions you'd want to put in place.
 
 ## Lab
 
@@ -203,6 +208,3 @@ language to browsers. JavaScript allows for dynamic page rendering, and user can
 interact with the contents of the page in real time. With knowledge of these
 basic techniques, you'll become comfortable working with more complex
 interactions like those in video games that you may have played or seen before!
-
-
-
