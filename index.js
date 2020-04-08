@@ -1,5 +1,5 @@
 // Your code here
-
+//test
 var dodger = document.getElementById("dodger");
 
 function moveDodgerLeft() {
