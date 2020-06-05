@@ -30,6 +30,6 @@ describe('moveDodgerRight', () => {
     var newPosition = dodger.style.left
     newPosition = parseInt(newPosition)
 
-    expect(newPosition).to.be.above(left)
+    // expect(newPosition).to.be.above(left) told to comment this out by Learn staff member since there is an issue with this test.
   })
 })
