@@ -1,9 +1,8 @@
 let dodger = document.getElementById('dodger');
 // let game = document.getElementById('game');
-
 // let maxWidth = (game.offsetWidth - dodger.offsetWidth);
 
-console.log(maxWidth)
+// console.log(maxWidth)
 
 function moveDodgerLeft() {
     let leftNumbers = dodger.style.left.replace("px", "");
