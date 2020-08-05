@@ -62,18 +62,3 @@ document.addEventListener('keydown', function(e) {
     moveDodgerDown()
   }
 })
-
-
-
-
-
-
-
-
-window.setInterval(function(){
-  var leftNumbers = rock.style.left.replace('px', '');
-  var left = parseInt(leftNumbers, 10);
-  if (left > 0) {
-    rock.style.left = `${left - 1}px`
-  }
-}, 1000);
