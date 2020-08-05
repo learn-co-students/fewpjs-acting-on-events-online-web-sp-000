@@ -3,35 +3,77 @@
 let dodger = document.getElementById("dodger");
 dodger.style.backgroundColor = "#FF69B4";
 
-document.addEventListener("keydown", function(e) {
-    if (e.key === "ArrowLeft") {
-      let leftNumbers = dodger.style.left.replace("px", "");
-      let left = parseInt(leftNumbers, 10);
-   
-      dodger.style.left = `${left - 1}px`;
-    }
-    if (e.key === "ArrowRight") {
-        let rightNumbers = dodger.style.left.replace("px", "");
-        let left = parseInt(rightNumbers, 10);
-     
-        dodger.style.left = `${left + 1}px`;
-      }
-  });
-
-  // SOLUTION IS WRITTEN BELOW... Above Code is from the Lab
+let rock = document.getElementById('rock');
+rock.style.backgroundColor = "#FFFFFF";
 
 function moveDodgerLeft() {
-    let leftNumbers = dodger.style.left.replace("px", "");
-    let left = parseInt(leftNumbers, 10);
-    if (left > 0) {
-        dodger.style.left = `${left - 1}px`;
-    }
+  var leftNumbers = dodger.style.left.replace('px', '');
+  var left = parseInt(leftNumbers, 10)
+  if (left > 0) {
+    dodger.style.left = `${left - 1}px`
+  }
 }
 
 function moveDodgerRight() {
-    let rightNumbers = dodger.style.left.replace("px", "");
-    let right = parseInt(rightNumbers, 10);
-    if (right > 0) {
-        dodger.style.left = `${right + 1}px`;
-    }
+  var leftNumbers = dodger.style.left.replace('px', '');
+  var left = parseInt(leftNumbers, 10)
+  if (left > 0) {
+    dodger.style.left = `${left + 1}px`
+  }
 }
+
+function moveDodgerUp() {
+  var bottomNumbers = dodger.style.bottom.replace('px', '');
+  var up = parseInt(bottomNumbers, 10)
+  if (up >= 0) {
+    dodger.style.bottom = `${up + 1}px`
+  }
+}
+
+function moveDodgerDown() {
+  var bottomNumbers = dodger.style.bottom.replace('px', '');
+  var down = parseInt(bottomNumbers, 10)
+  if (down >= 0) {
+    dodger.style.bottom = `${down - 1}px`
+  }
+}
+
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "ArrowLeft") {
+    moveDodgerLeft()
+  }
+})
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "ArrowRight") {
+    moveDodgerRight()
+  }
+})
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "ArrowUp") {
+    moveDodgerUp()
+  }
+})
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "ArrowDown") {
+    moveDodgerDown()
+  }
+})
+
+
+
+
+
+
+
+
+window.setInterval(function(){
+  var leftNumbers = rock.style.left.replace('px', '');
+  var left = parseInt(leftNumbers, 10);
+  if (left > 0) {
+    rock.style.left = `${left - 1}px`
+  }
+}, 1000);
