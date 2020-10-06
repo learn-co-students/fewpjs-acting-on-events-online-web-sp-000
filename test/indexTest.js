@@ -29,7 +29,6 @@ describe('moveDodgerRight', () => {
 
     var newPosition = dodger.style.left
     newPosition = parseInt(newPosition)
-
     expect(newPosition).to.be.above(left)
   })
 })
